@@ -26,6 +26,17 @@
                     "allowNull": false,
                     "field": "updatedAt",
                     "seqType": "Sequelize.DATE"
+                },
+                "RoomId": {
+                    "allowNull": true,
+                    "references": {
+                        "model": "Rooms",
+                        "key": "id"
+                    },
+                    "onDelete": "SET NULL",
+                    "onUpdate": "CASCADE",
+                    "field": "RoomId",
+                    "seqType": "Sequelize.INTEGER"
                 }
             },
             "indexes": []
@@ -221,5 +232,5 @@
             "indexes": []
         }
     },
-    "revision": 2
+    "revision": 3
 }
